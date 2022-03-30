@@ -15,11 +15,9 @@
     * [ddos](./cybersecurity/ddos.md)
 * [机器学习](./ml/README.md)
     * [基础](./ml/base.md)
-    * 监督学习
-    * 非监督学习
-    * 概率图模型
-    * 集成学习
-    * 优化算法
+    * [LR](./ml/lr.md)
+    * [SVM](./ml/svm.md)
+    * [XGBoost](./ml/xgboost.md)
 * [深度学习](./dl/README.md)
     * 基础
     * [CNN](./dl/cnn.md)
