@@ -21,7 +21,7 @@
 
    - **Transformer Encoder**
 
-     Transformer Encoder由**N个Transformer block组成**,每个block可以分为输入和输出两部分,每一部分都按照sublayer的标准结构组成：
+     Transformer Encoder由**N个Transformer block组成**,每个block可以分为输入和输出两部分,每一部分都按照sublayer的标准结构组成：  
 
      <img src="https://raw.githubusercontent.com/AnchoretY/images/master/blog/image.ms6w1661ntl.png" alt="image" style="zoom:50%;" />
 
@@ -33,13 +33,13 @@
 
        输出子层中sulayer为**Feed Forward**，在其上加入了Norm、残差连接、dropout机制。
 
-       Feed Forward结构：
+       Feed Forward结构：  
 
-       <img src="/Users/yhk-home/Library/Application Support/typora-user-images/image-20220413154623295.png" alt="image-20220413154623295" style="zoom:60%;" />
+       <img src="https://raw.githubusercontent.com/AnchoretY/images/master/blog/image.osgnp8pb8x.png" alt="image" style="zoom:67%;" />
 
        - **Sublayer结构**
 
-         ​	输入子层与输出子层都遵循下面的结构，其中Muti-Head Attention、Feed Forward即为其中的核心子层。
+         ​	输入子层与输出子层都遵循下面的结构，其中Muti-Head Attention、Feed Forward即为其中的核心子层.  
 
          <img src="https://raw.githubusercontent.com/AnchoretY/images/master/blog/image.ad3lkvbrzj.png" alt="image" style="zoom:67%;" />
 
@@ -65,7 +65,7 @@
 
    **在BERT中的Embedding+Transformer Encoder主结构后，将输出向量用两个全连接网络进行MLM和NSP任务的预测**
 
-   <img src="/Users/yhk-home/Library/Application Support/typora-user-images/image-20220413153015966.png" alt="image-20220413153015966" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/AnchoretY/images/master/blog/image.33y06v5l186.png" alt="image" style="zoom:67%;" />
 
    **Loss构成：MLM Loss+NSP Loss**
 
