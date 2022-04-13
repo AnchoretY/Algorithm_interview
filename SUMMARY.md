@@ -22,6 +22,8 @@
     * 基础
     * [CNN](./dl/cnn.md)
     * [RNN](./dl/rnn.md)
-    * [Attention](./dl/attention.md)
     * [word2vec](./dl/word2vec.md)
+    * [Attention](./dl/attention.md)
+    * [Transformer](./dl/transformer.md)
+    * [BERT](./dl/bert.md)
 
