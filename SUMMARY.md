@@ -22,8 +22,9 @@
     * 基础
     * [CNN](./dl/cnn.md)
     * [RNN](./dl/rnn.md)
-    * [word2vec](./dl/word2vec.md)
+    * [WordEmbedding](./dl/word_embedding.md)
     * [Attention](./dl/attention.md)
     * [Transformer](./dl/transformer.md)
     * [BERT](./dl/bert.md)
+    * [Siamese network](./dl/siamese_network.md)
 
