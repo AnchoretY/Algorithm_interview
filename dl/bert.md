@@ -3,6 +3,7 @@
 **推荐阅读：**
 
 - [BERT原理与NSL和MLM](https://anchorety.github.io/Algorithm_interview/dl/bert.html)
+- [This post is all you need（①多头注意力机制原理）](https://www.ylkz.life/deeplearning/p10553832/)
 
 
 
