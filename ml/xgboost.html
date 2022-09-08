@@ -1,0 +1,631 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>XGBoost · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../dl/" />
+    
+    
+    <link rel="prev" href="svm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/tcp&udp.html">
+            
+                <a href="../network/tcp&udp.html">
+            
+                    
+                    TCP与UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/dns.html">
+            
+                <a href="../network/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/misc.html">
+            
+                <a href="../network/misc.html">
+            
+                    
+                    杂项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../cybersecurity/">
+            
+                <a href="../cybersecurity/">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../cybersecurity/xss.html">
+            
+                <a href="../cybersecurity/xss.html">
+            
+                    
+                    XSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../cybersecurity/sqli.html">
+            
+                <a href="../cybersecurity/sqli.html">
+            
+                    
+                    SQLi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../cybersecurity/webshell.html">
+            
+                <a href="../cybersecurity/webshell.html">
+            
+                    
+                    Webshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../cybersecurity/csrf.html">
+            
+                <a href="../cybersecurity/csrf.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../cybersecurity/ddos.html">
+            
+                <a href="../cybersecurity/ddos.html">
+            
+                    
+                    ddos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="base.html">
+            
+                <a href="base.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="lr.html">
+            
+                <a href="lr.html">
+            
+                    
+                    LR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="svm.html">
+            
+                <a href="svm.html">
+            
+                    
+                    SVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    XGBoost
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dl/">
+            
+                <a href="../dl/">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../dl/cnn.html">
+            
+                <a href="../dl/cnn.html">
+            
+                    
+                    CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../dl/rnn.html">
+            
+                <a href="../dl/rnn.html">
+            
+                    
+                    RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../dl/word_embedding.html">
+            
+                <a href="../dl/word_embedding.html">
+            
+                    
+                    WordEmbedding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../dl/attention.html">
+            
+                <a href="../dl/attention.html">
+            
+                    
+                    Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../dl/transformer.html">
+            
+                <a href="../dl/transformer.html">
+            
+                    
+                    Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../dl/bert.html">
+            
+                <a href="../dl/bert.html">
+            
+                    
+                    BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../dl/siamese_network.html">
+            
+                <a href="../dl/siamese_network.html">
+            
+                    
+                    Siamese network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../dl/gnn.html">
+            
+                <a href="../dl/gnn.html">
+            
+                    
+                    GNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >XGBoost</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="xgboost">XGBoost</h1>
+<h4 id="xgboost&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8282;&#x70B9;&#x5212;&#x5206;&#x51C6;&#x5219;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">XGBoost&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8282;&#x70B9;&#x5212;&#x5206;&#x51C6;&#x5219;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h4>
+<blockquote>
+<p>&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><img src="https://github.com/AnchoretY/images/blob/master/blog/xgboost%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0.png?raw=True" alt="img"></p>
+<p> &#x8282;&#x70B9;&#x5212;&#x5206;&#x51C6;&#x5219;&#xFF1A;</p>
+<ul>
+<li><p>&#x5206;&#x7C7B;&#x6811;&#xFF1A;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x83B7;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;</p>
+</li>
+<li><p>&#x56DE;&#x5F52;&#x6811;&#xFF1A;&#x6700;&#x5927;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>&#x6574;&#x4F53;&#x6D41;&#x7A0B;&#xFF1A;</strong></p>
+<p><strong>Xgboost&#x548C;GBDT&#x7B97;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;&#x591A;&#x5C11;&#xFF1F;</strong></p>
+<p> &#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x628A;&#x5C5E;&#x4E8E;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x6839;&#x636E;&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x5347;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x901A;&#x8FC7;&#x7EBF;&#x6027;&#x626B;&#x63CF;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x51B3;&#x5B9A;&#x8BE5;&#x7279;&#x5F81;&#x7684;&#x6700;&#x4F73;&#x5206;&#x88C2;&#x70B9;&#xFF0C;&#x5E76;&#x8BB0;&#x5F55;&#x8BE5;&#x7279;&#x5F81;&#x7684;&#x6700;&#x5927;&#x6536;&#x76CA;&#xFF08;&#x91C7;&#x7528;&#x6700;&#x4F73;&#x5206;&#x88C2;&#x70B9;&#x65F6;&#x7684;&#x6536;&#x76CA;&#xFF09;</p>
+<p> &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;:<strong>O(nlogn *d* m)</strong>(n&#x662F;&#x6837;&#x672C;&#x4E2A;&#x6570;&#xFF0C;d&#x662F;&#x7279;&#x5F81;&#x4E2A;&#x6570;,m&#x662F;&#x6811;&#x7684;&#x6DF1;&#x5EA6;)</p>
+<p><strong>xgboost&#x662F;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x526A;&#x679D;&#x7684;&#xFF1F;</strong></p>
+<p> xgboost&#x91C7;&#x7528;<strong>&#x540E;&#x526A;&#x679D;</strong>&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x526A;&#x679D;&#xFF0C;&#x5373; &#x4ECE;&#x9876;&#x5230;&#x5E95;&#x5EFA;&#x7ACB;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x7684;&#x5B50;&#x6811;&#xFF0C;&#x518D;&#x4ECE;&#x5E95;&#x5230;&#x9876;&#x53CD;&#x5411;&#x8FDB;&#x884C;&#x526A;&#x679D;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x5BB9;&#x6613;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
+<p><strong>xgboost&#x548C;gbdt&#x7684;&#x533A;&#x522B;&#xFF1A;</strong></p>
+<p> 1.xgboost&#x662F;gbdt&#x7684;&#x5DE5;&#x7A0B;&#x5316;&#x5B9E;&#x73B0;</p>
+<p> 2.xgboost&#x52A0;&#x5165;&#x4E86;&#x6B63;&#x5219;&#x5316;&#x4FE1;&#x606F;</p>
+<p> 3.xgboost&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;</p>
+<p> 4.xgboost&#x635F;&#x5931;&#x51FD;&#x6570;&#x52A0;&#x5165;&#x4E86;&#x4E8C;&#x9636;&#x5BFC;&#x6570;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x964D;&#x7684;&#x66F4;&#x5FEB;&#x66F4;&#x51C6;</p>
+<p> 5.xgboost&#x652F;&#x6301;&#x548C;&#x968F;&#x673A;&#x68EE;&#x6797;&#x4E00;&#x6837;&#x7684;&#x5217;&#x62BD;&#x6837;</p>
+<p> 6.xgboost&#x652F;&#x6301;&#x5E76;&#x884C;&#x5316;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x662F;&#x6811;&#x4E0E;&#x6811;&#x4E4B;&#x95F4;&#x7684;&#x5E76;&#x884C;&#x5316;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x6700;&#x8D39;&#x65F6;&#x7684;&#x7279;&#x5F81;&#x6392;&#x5E8F;&#x622A;&#x65AD;&#x8FDB;&#x884C;&#x5E76;&#x884C;&#x5316;&#xFF0C;&#x5C06;&#x6392;&#x5E8F;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x6876;&#x4FDD;&#x5B58;&#xFF0C;&#x5404;&#x4E2A;&#x6811;&#x751F;&#x6210;&#x65F6;&#x590D;&#x7528;</p>
+<p> 7.xgboost&#x57FA;&#x6A21;&#x578B;&#x9664;&#x4E86;&#x652F;&#x6301;gbdt&#x652F;&#x6301;&#x7684;CART&#x6811;&#x5916;&#x8FD8;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x7684;&#x57FA;&#x6A21;&#x578B;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="svm.html" class="navigation navigation-prev " aria-label="Previous page: SVM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../dl/" class="navigation navigation-next " aria-label="Next page: 深度学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"XGBoost","level":"1.4.4","depth":2,"next":{"title":"深度学习","level":"1.5","depth":1,"path":"dl/README.md","ref":"./dl/README.md","articles":[{"title":"基础","level":"1.5.1","depth":2,"ref":"","articles":[]},{"title":"CNN","level":"1.5.2","depth":2,"path":"dl/cnn.md","ref":"./dl/cnn.md","articles":[]},{"title":"RNN","level":"1.5.3","depth":2,"path":"dl/rnn.md","ref":"./dl/rnn.md","articles":[]},{"title":"WordEmbedding","level":"1.5.4","depth":2,"path":"dl/word_embedding.md","ref":"./dl/word_embedding.md","articles":[]},{"title":"Attention","level":"1.5.5","depth":2,"path":"dl/attention.md","ref":"./dl/attention.md","articles":[]},{"title":"Transformer","level":"1.5.6","depth":2,"path":"dl/transformer.md","ref":"./dl/transformer.md","articles":[]},{"title":"BERT","level":"1.5.7","depth":2,"path":"dl/bert.md","ref":"./dl/bert.md","articles":[]},{"title":"Siamese network","level":"1.5.8","depth":2,"path":"dl/siamese_network.md","ref":"./dl/siamese_network.md","articles":[]},{"title":"GNN","level":"1.5.9","depth":2,"path":"dl/gnn.md","ref":"./dl/gnn.md","articles":[]}]},"previous":{"title":"SVM","level":"1.4.3","depth":2,"path":"ml/svm.md","ref":"./ml/svm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ml/xgboost.md","mtime":"2022-04-07T03:58:29.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-08T04:06:12.228Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
